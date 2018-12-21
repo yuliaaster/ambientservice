@@ -20,6 +20,15 @@
 	<script src="https://unpkg.com/aframe-animation-component@^5.1.2/dist/aframe-animation-component.min.js"></script>
 	<!-- include ar.js -->
 	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
+
+	<!-- NOTE: audio js  -->
+	<script src="/path/to/howler.js"></script>
+
+	<script>
+    var sound = new Howl({
+      src: ['sound.webm', 'sound.mp3']
+    });
+</script>
 </head>
 
 <body>
@@ -28,8 +37,9 @@
 
 		<!-- NOTE: 3D importieren meherere Assets gibt die möglichkeit den Code kleiner zu schreiben -->
 		<a-assets>
-			
+
 			<a-assets-item id="mercury" src="assets/mercury.gltf"></a-assets-item>
+			<audio id="playsoundtest" src="testsound.mp3" preload="auto"></audio>
 
 		</a-assets>
 
@@ -44,9 +54,12 @@
 
 			<!-- NOTE: Test objekt  -->
 			<a-entity>
-				<a-entity gltf-model="#mercury" position="0 0 0" rotation="0 0 0">
+				<a-entity gltf-model="#mercury" position="0 0 0" rotation="0 0 0" sound="src: url(testsound.mp3); autoplay: true">
 			</a-entity>
 
+			<!-- NOTE: add audio  -->
+
+	 	<a-entity sound="src: #playsoundtest"></a-entity>
 
 		</a-marker>
 		<a-entity camera></a-entity>
