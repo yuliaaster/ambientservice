@@ -28,14 +28,9 @@
 
 		<!-- NOTE: 3D importieren meherere Assets gibt die möglichkeit den Code kleiner zu schreiben -->
 		<a-assets>
-			<a-assets-item id="erde" src="assets/erde.gltf"></a-assets-item>
+			
 			<a-assets-item id="mercury" src="assets/mercury.gltf"></a-assets-item>
-			<a-assets-item id="venus" src="assets/venus.gltf"></a-assets-item>
-			<a-assets-item id="mars" src="assets/mars.gltf"></a-assets-item>
-			<a-assets-item id="jupiter" src="assets/jupiter.gltf"></a-assets-item>
-			<a-assets-item id="saturn" src="assets/saturn.gltf"></a-assets-item>
-			<a-assets-item id="uranus" src="assets/uranus.gltf"></a-assets-item>
-			<a-assets-item id="neptun" src="assets/neptun.gltf"></a-assets-item>
+
 		</a-assets>
 
 		<!-- NOTE: Marker hinzufügen-->
@@ -46,24 +41,10 @@
 			<!-- NOTE: scale skaliert 0.2 auf 20% von 100% -->
 			<!-- NOTE: Entity position box für alle entity objekte  -->
 
-			<!-- NOTE: Erde -->
-			<a-entity>
-				<a-entity position="0 0 0" rotation="0 0 0">
-					<a-entity gltf-model="#erde" position="0 0 -1" scale="0.2 0.2 0.2">
-						<!-- NOTE: Animation von Objekt selbst. Animation ist in Sekunsen -->
-						<a-animation attribute="rotation" dur="5000" to="0 360 0" repeat="indefinite" easing="linear"> </a-animation>
-					</a-entity>
-					<!-- NOTE: Animation von Entity box -->
-				</a-entity>
-				<a-animation attribute="rotation" dur="5000" to="0 360 0" repeat="indefinite" easing="linear"> </a-animation>
-			</a-entity>
 
-			<!-- NOTE: Merkury -->
+			<!-- NOTE: Test objekt  -->
 			<a-entity>
-				<a-entity position="0 0 0" rotation="0 45 0">
-					<a-entity gltf-model="#mercury" position="0 0 -2" scale="0.2 0.2 0.2"></a-entity>
-				</a-entity>
-				<a-animation attribute="rotation" dur="5000" to="0 360 0" repeat="indefinite" easing="linear"> </a-animation>
+				<a-entity gltf-model="#mercury" position="0 0 0" rotation="0 0 0">
 			</a-entity>
 
 
