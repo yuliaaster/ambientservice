@@ -22,7 +22,7 @@
 	<script src="js/vendor/aframe/build/aframe-ar.js"></script>
 
 	<!-- NOTE: audio js  -->
-	<script src="/path/to/howler.js"></script>
+	<script src="js/sound/howler.js-master/howler.js"></script>
 
 	<script>
     var sound = new Howl({
@@ -39,7 +39,7 @@
 		<a-assets>
 
 			<a-assets-item id="mercury" src="assets/mercury.gltf"></a-assets-item>
-			<audio id="playsoundtest" src="testsound.mp3" preload="auto"></audio>
+			<audio id="sound" src="assets/testsound.mp3" preload="auto"></audio>
 
 		</a-assets>
 
@@ -58,10 +58,11 @@
 			</a-entity>
 
 			<!-- NOTE: add audio  -->
-
-	 	<a-entity sound="src: #playsoundtest"></a-entity>
-
+			<a-box position='0 0.5 0' material='color: black;'soundhandler>
+			</a-box>
 		</a-marker>
+		<a-entity sound="src: #sound" autoplay="false"></a-entity>
+
 		<a-entity camera></a-entity>
 	</a-scene>
 
